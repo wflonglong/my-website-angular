@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'wf等待花开';
+  nowDate: any;
+  constructor() {
+  	this.nowDate = new Date();
+  	setInterval(() => {
+  		this.nowDate = new Date();
+  	}, 1000);
+  }
 }
